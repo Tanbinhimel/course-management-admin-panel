@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {environment} from "../environments/environment";
-import {GoogleLoginProvider, SocialAuthService, SocialUser} from "@abacritt/angularx-social-login";
+import {SocialAuthService, SocialUser} from "@abacritt/angularx-social-login";
 
 @Component({
   selector: 'app-root',
@@ -9,7 +8,6 @@ import {GoogleLoginProvider, SocialAuthService, SocialUser} from "@abacritt/angu
 })
 export class AppComponent implements OnInit{
   title = 'course-management-admin-panel';
-  private accessToken ='';
   user: SocialUser;
 
   constructor(private authService: SocialAuthService) {
@@ -21,9 +19,5 @@ export class AppComponent implements OnInit{
       this.user = user;
       console.log(this.user);
     })
-  }
-
-  getAccessToken(): void {
-    this.authService.getAccessToken(GoogleLoginProvider.PROVIDER_ID).then(accessToken => this.accessToken = accessToken);
   }
 }
