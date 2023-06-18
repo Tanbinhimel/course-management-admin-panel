@@ -1,11 +1,3 @@
-<div *ngIf="!user.id">
-  <asl-google-signin-button
-    data-skip_prompt_cookie="ggCookie"
-    type='standard'
-    size='medium'
-    theme="filled_black"
-    shape="circle"
-    text="continue_with">
-  </asl-google-signin-button>
+<div>
+  <app-login></app-login>
 </div>
-<div *ngIf="user.id">{{user | json}}</div>

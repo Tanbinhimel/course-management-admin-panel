@@ -9,10 +9,12 @@ import {
   SocialLoginModule
 } from "@abacritt/angularx-social-login";
 import {environment} from "../environments/environment";
+import {LoginComponent} from "./login/login.component";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

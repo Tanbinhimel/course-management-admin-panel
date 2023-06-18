@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {SocialAuthService, SocialUser} from "@abacritt/angularx-social-login";
 
 @Component({
   selector: 'app-root',
@@ -8,16 +7,10 @@ import {SocialAuthService, SocialUser} from "@abacritt/angularx-social-login";
 })
 export class AppComponent implements OnInit{
   title = 'course-management-admin-panel';
-  user: SocialUser;
 
-  constructor(private authService: SocialAuthService) {
-    this.user = new SocialUser();
+  constructor() {
   }
 
   ngOnInit() {
-    this.authService.authState.subscribe(user => {
-      this.user = user;
-      console.log(this.user);
-    })
   }
 }
