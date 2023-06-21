@@ -10,6 +10,7 @@ import {
 } from "@abacritt/angularx-social-login";
 import {environment} from "../environments/environment";
 import {LoginComponent} from "./login/login.component";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import {LoginComponent} from "./login/login.component";
   imports: [
     BrowserModule,
     SocialLoginModule,
-    GoogleSigninButtonModule
+    GoogleSigninButtonModule,
+    HttpClientModule
   ],
   providers: [
     {
